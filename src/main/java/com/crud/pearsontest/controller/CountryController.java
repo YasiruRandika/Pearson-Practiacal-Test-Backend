@@ -23,7 +23,7 @@ public class CountryController {
     @Autowired
     CountryService countryService;
 
-    @CrossOrigin(origins = "*")
+    @CrossOrigin(origins = "https://pearsontest-90825.web.app")
     @GetMapping("/getCountryList")
     public List<CountryModel> getCountryList() {
         List<CountryModel> countryList = new ArrayList<>();
