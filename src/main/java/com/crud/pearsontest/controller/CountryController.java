@@ -24,7 +24,7 @@ public class CountryController {
     CountryService countryService;
 
     @CrossOrigin(origins = "https://pearsontest-90825.web.app")
-    @GetMapping("/getCountryList")
+    @GetMapping("rest/v2/getCountryList")
     public List<CountryModel> getCountryList() {
         List<CountryModel> countryList = new ArrayList<>();
         countryList = countryService.getCountryList();
@@ -32,26 +32,26 @@ public class CountryController {
     }
 
     @CrossOrigin(origins = "https://pearsontest-90825.web.app")
-    @PostMapping("/addCountry")
+    @PostMapping("rest/v2/addCountry")
     public CountryModel addCountry(@RequestBody CountryModel country) {
         CountryModel countryModel = countryService.addCountry(country);
         return countryModel;
     }
 
     @CrossOrigin(origins = "https://pearsontest-90825.web.app")
-    @GetMapping("/getCountryById/{id}")
+    @GetMapping("rest/v2/getCountryById/{id}")
     public Optional<CountryModel> getCountryById(@PathVariable int id) {
         return countryService.getCountryById(id);
     }
 
     @CrossOrigin(origins = "https://pearsontest-90825.web.app")
-    @DeleteMapping("/deleteCountry/{id}")
+    @DeleteMapping("rest/v2/deleteCountry/{id}")
     public String deleteCountry(@PathVariable int id) {
         return countryService.deleteCountry(id);
     }
 
     @CrossOrigin(origins = "https://pearsontest-90825.web.app")
-    @PutMapping("/updateCountry/{id}")
+    @PutMapping("rest/v2/updateCountry/{id}")
     public CountryModel updateCountry(@RequestBody CountryModel country) {
 		return countryService.updateCountry(country);
 	}
