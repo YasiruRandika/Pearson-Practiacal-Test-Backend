@@ -19,7 +19,7 @@ import com.crud.pearsontest.service.CountryService;
 
 @RestController
 public class CountryController {
-    //Inject CountryService for CountryController
+    //Inject CountryService for  CountryController
     @Autowired
     CountryService countryService;
 
